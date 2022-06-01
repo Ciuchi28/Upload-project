@@ -61,6 +61,26 @@ public class EsercizioArray
        return t;
    }
    
+   public static int sum(int m[][])
+   {
+      int somma=0;
+      for (int i=0; i<m.length; i++)
+           for (int j=0; j<m.length; j++)
+                somma += m[i][j];
+                   
+       return somma; 
+   }
+   
+   public static int prod(int m[][])
+   {
+      int prodotto=1;
+      for (int i=0; i<m.length; i++)
+           for (int j=0; j<m.length; j++)
+                prodotto *= m[i][j];
+                   
+       return prodotto; 
+   }
+   
    public static void main(String[] args)
    {
        Scanner s=new Scanner (System.in);
@@ -87,4 +107,8 @@ public class EsercizioArray
        System.out.println("\nMatrice trasposta:");
        stampa(trasp);
        System.out.println("\n");
+       int s = sum(m);
+       System.out.println("Somma di tutti gli elementi: "+s);
+       int p = prod(m);
+       System.out.println("Prodotto di tutti gli elementi: "+p);
    }
